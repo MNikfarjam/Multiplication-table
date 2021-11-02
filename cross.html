@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loop</title>
+</head>
+
+<body>
+
+<table id="result"> </table>
+</body>
+<script>
+    var num = "";
+   
+    
+   var element = document.getElementById("result");
+    for (i=1; i<=10; i++)
+        {
+            num+= "<tr>"
+            for (j=1; j<=10; j++)
+                {
+                    if (i!=j){
+                 num+= "<td>" + i*j + "</td>" ;
+                        }else{
+                         num+= "<td style='background-color: yellow;'>" + i*j + "</td>" ;
+                            
+                        }
+                        
+                    }
+             num+="</tr>" ;
+                           
+        }
+ element.innerHTML= num;
+    
+    </script>
+</html>
